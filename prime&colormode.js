@@ -18,7 +18,6 @@ function Prime() {
 let btn = document.querySelector("#mode");
 let mode = 'light';
 let body = document.querySelector("body");
-
 btn.addEventListener('click', () => {
   if (mode === 'light') {
     mode = 'dark';
