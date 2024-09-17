@@ -3,7 +3,6 @@ function Radio(){
   let female = document.getElementById("female").checked;
   let err = document.getElementById("err");
   console.log(male+ ":" +female);
-
   if(male == false && female == false){
     err.innerText = "Please select gender";
     err.style.color = 'red';
