@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPY NUMBER</title>
+</head>
+<body>
+  <h1>SPY Number!</h1>
+  <input type="text" id="spy">
+  <button onclick="Check()">SPY CHECK</button>
+  <br/><br/>
+  <h1 id="result"></h1>
+  <script>
+   function Check(){
+    let inp = document.getElementById('spy').value;
+    let digit = inp.toString().split('').map(Number);
+    let sum = digit.reduce((a, b)=> a + b);
+    let dot = digit.reduce((a, b)=> a * b);
+
+    if(sum == dot){
+      document.getElementById('result').textContent = `This ${inp} is Spy`;
+    }else{
+      document.getElementById('result').textContent = `This ${inp} is not Spy`;
+    }
+   }
+  </script>
+</body>
+</html>
